@@ -3,13 +3,7 @@ const btn = document.getElementById("button");
 btn.addEventListener("click" , () => {
     const inputNum = document.getElementById("number").value;
 
-    // const value = inputNum.value
-    // inputNum.value = value
-
-    // const api = fetch(` https://phonevalidation.abstractapi.com/v1/?api_key=05110cf63d354bf5be4ca3d5e008e8d9&phone=${inputNum} `)
-    const api = fetch(
-    `https://phonevalidation.abstractapi.com/v1/?api_key=05110cf63d354bf5be4ca3d5e008e8d9&phone=${inputNum}`
-  );
+    const api = fetch(`https://phonevalidation.abstractapi.com/v1/?api_key=05110cf63d354bf5be4ca3d5e008e8d9&phone=${inputNum}`);
     // When the response comes back, turn it into JSON
     api.then((data) => data.json())
     // When the JSON is ready, show it or put it on the page
